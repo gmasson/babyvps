@@ -18,9 +18,9 @@ Clone the repository on your VPS using the command:
 
     git clone https://github.com/gmasson/babyvps.git
     
-Open the project folder with the command:
+Change the permissions and open the folder with the command:
 
-    cd ./babyvps-master
+    chmod -R 750 babyvps && cd ./babyvps
 
 Then open the file 'babyvps.sh' using the command:
 
