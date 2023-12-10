@@ -1,29 +1,37 @@
 # BabyVPS
-System for installing the ideal programs for creating VPS servers.
+Pack de scripts para instalação de programas, uso de utilitários e configurações em servidores Ubuntu.
 
-## Available Programs
-- APACHE 2
-- NGINX
-- MYSQL
-- MariaDB
-- PHP 7
-- NODEJS
-- NPM
-- NANO
-- PROFTP
+## Scripts
 
-## Installation
+`install-apache.sh`: Instala Apache 2, PHP 8.1, MySQL, PHPMyAdmin, e realiza configurações de segurança.
 
-Clone the repository on your VPS using the command:
+`install-nginx.sh`: Instala Nginx, PHP 8.1, MySQL, PHPMyAdmin, e realiza configurações de segurança.
+
+`install-openlitespeed.sh`: Instala OpenLiteSpeed, PHP 8.1, MySQL, PHPMyAdmin, e realiza configurações de segurança.
+
+`new-domain-apache.sh`: Cria o diretório e configura o Apache para um novo domínio.
+
+`new-domain-nginx.sh`: Cria o diretório e configura o Nginx para um novo domínio.
+
+`new-domain-openlitespeed.sh`: Cria o diretório e configura o OpenLiteSpeed para um novo domínio.
+
+`backup.sh`: Realiza o backup de /var/www/ em arquivo .tar.gz para uma pasta pré determinada.
+
+`update.sh`: Realiza a atualização de todo servidor.
+
+
+## Instalação
+
+Clone o repositório em sua VPS usando o comando:
 
     git clone https://github.com/gmasson/babyvps.git
-    
-Change the permissions and open the folder with the command:
+
+Altere as permissões e abra a pasta com o comando:
 
     chmod -R 750 babyvps && cd ./babyvps
 
-Then open the file 'babyvps.sh' using the command:
+Na etapa final, escolha um script da pasta /scripts e execute-o na linha de comando, por exemplo:
 
-    ./babyvps.sh
+    ./scripts/install-nginx.sh
 
-The system will guide you to install the programs you want, asking you what it can and cannot install.
+Todos os scripts terão seus programas e configurações pré definidas. É importante que você revise o código para verificar se os padrões são os mesmos que deseja.
